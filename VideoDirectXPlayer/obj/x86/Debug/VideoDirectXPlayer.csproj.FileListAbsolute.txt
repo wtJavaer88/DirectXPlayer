@@ -1,0 +1,9 @@
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.csprojResolveAssemblyReference.cache
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.Form1.resources
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.Properties.Resources.resources
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.csproj.GenerateResource.Cache
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\bin\Debug\VideoDirectXPlayer.exe
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\bin\Debug\VideoDirectXPlayer.pdb
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.exe
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\obj\x86\Debug\VideoDirectXPlayer.pdb
+d:\cpr216\documents\visual studio 2010\Projects\VideoDirectXPlayer\VideoDirectXPlayer\bin\Debug\VideoDirectXPlayer.exe.config
