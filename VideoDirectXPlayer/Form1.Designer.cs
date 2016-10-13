@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_open = new System.Windows.Forms.Button();
+            this.bt_play = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_pre = new System.Windows.Forms.Button();
+            this.bt_next = new System.Windows.Forms.Button();
+            this.tb_srtcontent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -42,26 +43,26 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 346);
+            this.panel1.Size = new System.Drawing.Size(552, 346);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // bt_open
             // 
-            this.button1.Location = new System.Drawing.Point(22, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "打开";
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.bt_open.Location = new System.Drawing.Point(22, 380);
+            this.bt_open.Name = "bt_open";
+            this.bt_open.Size = new System.Drawing.Size(80, 38);
+            this.bt_open.TabIndex = 1;
+            this.bt_open.Text = "打开";
+            this.bt_open.Click += new System.EventHandler(this.bt_open_Click_1);
             // 
-            // button2
+            // bt_play
             // 
-            this.button2.Location = new System.Drawing.Point(125, 380);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "播放";
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bt_play.Location = new System.Drawing.Point(125, 380);
+            this.bt_play.Name = "bt_play";
+            this.bt_play.Size = new System.Drawing.Size(81, 38);
+            this.bt_play.TabIndex = 1;
+            this.bt_play.Text = "播放";
+            this.bt_play.Click += new System.EventHandler(this.bt_play_Click);
             // 
             // openFileDialog1
             // 
@@ -75,40 +76,49 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(540, 21);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button3
+            // bt_pre
             // 
-            this.button3.Location = new System.Drawing.Point(244, 380);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 38);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "快退";
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.bt_pre.Location = new System.Drawing.Point(244, 380);
+            this.bt_pre.Name = "bt_pre";
+            this.bt_pre.Size = new System.Drawing.Size(81, 38);
+            this.bt_pre.TabIndex = 1;
+            this.bt_pre.Text = "快退";
+            this.bt_pre.Click += new System.EventHandler(this.bt_pre_Click_1);
             // 
-            // button4
+            // bt_next
             // 
-            this.button4.Location = new System.Drawing.Point(351, 380);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 38);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "快进";
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.bt_next.Location = new System.Drawing.Point(351, 380);
+            this.bt_next.Name = "bt_next";
+            this.bt_next.Size = new System.Drawing.Size(80, 38);
+            this.bt_next.TabIndex = 1;
+            this.bt_next.Text = "快进";
+            this.bt_next.Click += new System.EventHandler(this.bt_next_Click);
+            // 
+            // tb_srtcontent
+            // 
+            this.tb_srtcontent.Location = new System.Drawing.Point(36, 447);
+            this.tb_srtcontent.Multiline = true;
+            this.tb_srtcontent.Name = "tb_srtcontent";
+            this.tb_srtcontent.Size = new System.Drawing.Size(484, 52);
+            this.tb_srtcontent.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-            this.ClientSize = new System.Drawing.Size(540, 461);
+            this.ClientSize = new System.Drawing.Size(552, 511);
+            this.Controls.Add(this.tb_srtcontent);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_next);
+            this.Controls.Add(this.bt_open);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_pre);
+            this.Controls.Add(this.bt_play);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Visual C#中使用DriectX实现媒体播放";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,12 +128,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_open;
+        private System.Windows.Forms.Button bt_play;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_pre;
+        private System.Windows.Forms.Button bt_next;
+        private System.Windows.Forms.TextBox tb_srtcontent;
     }
 }
 
